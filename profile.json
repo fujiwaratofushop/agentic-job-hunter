@@ -56,30 +56,6 @@
         "Delivered engineering estimates with ~95% accuracy",
         "Mentored 10+ developers across multiple deliverables"
       ]
-    },
-    {
-      "company": "HCL Technologies",
-      "position": "Internship Trainee — Products & Platforms Division",
-      "location": "Bengaluru",
-      "duration": "Jun 2018 – Dec 2018",
-      "skills": ["Java", "Jenkins", "Flask", "Python", "React", "GitHub"],
-      "projects": [
-        {
-          "name": "Project Migration Tool",
-          "description": "Built a Java application to migrate and manage projects between CI servers (IBM BuildForge and Jenkins), enabling bulk import/export of 10,000+ projects"
-        },
-        {
-          "name": "GitHub Access Audit Tool",
-          "description": "Developed a web application to manage and audit unauthorized access on GitHub@HCL"
-        },
-        {
-          "name": "Status Monitoring Dashboard",
-          "description": "Created a React + Flask dashboard for managers and team leads to monitor multiple application statuses simultaneously — saving 6,000+ person-hours over 3 months"
-        }
-      ],
-      "achievements": [
-        "Saved 6,000+ person-hours over 3 months through dashboard development"
-      ]
     }
   ],
   "skills": [
@@ -109,7 +85,9 @@
     "Design Systems",
     "CI/CD",
     "TensorFlow",
-    "n8n"
+    "n8n",
+    "Langchain",
+    "Google ADK"
   ],
   "education": {
     "degree": "Bachelor of Engineering - Electrical and Electronics Engineering",
@@ -117,10 +95,7 @@
     "year": 2019
   },
   "location_preference": [
-    "Netherlands",
-    "Germany",
-    "Dubai",
-    "Singapore"
+    "NOT India"
   ],
   "visa_status": "Open to visa sponsorship",
   "languages": [
