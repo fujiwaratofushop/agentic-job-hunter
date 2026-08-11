@@ -1,0 +1,282 @@
+[
+  {
+    "company": "Grab",
+    "careers_link": "https://www.grab.careers/en/jobs/",
+    "region": "Singapore",
+    "notes": "Regional super-app, large eng org, sponsors EP routinely",
+    "in_pipeline": false
+  },
+  {
+    "company": "Sea Ltd / Shopee",
+    "careers_link": "https://career.sea.com/",
+    "region": "Singapore",
+    "notes": "Large tech employer, sponsors EP",
+    "in_pipeline": false
+  },
+  {
+    "company": "DBS Bank",
+    "careers_link": "https://www.dbs.com/careers/default.page",
+    "region": "Singapore",
+    "notes": "Tech-forward bank, big digital/eng arm, sponsors",
+    "in_pipeline": false
+  },
+  {
+    "company": "GIC",
+    "careers_link": "https://gic.careers/",
+    "region": "Singapore",
+    "notes": "Sovereign wealth fund, tech + quant roles, sponsors",
+    "in_pipeline": false
+  },
+  {
+    "company": "Google",
+    "careers_link": "https://careers.google.com/",
+    "region": "Singapore",
+    "notes": "Singapore APAC HQ, large APAC hub",
+    "in_pipeline": false
+  },
+  {
+    "company": "ByteDance/TikTok",
+    "careers_link": "https://careers.tiktok.com/",
+    "region": "Singapore",
+    "notes": "Singapore hub, aggressive non-local hiring",
+    "in_pipeline": false
+  },
+  {
+    "company": "Temasek",
+    "careers_link": "https://www.temasek.com.sg/en/careers",
+    "region": "Singapore",
+    "notes": "Similar profile to GIC",
+    "in_pipeline": false
+  },
+  {
+    "company": "Visa",
+    "careers_link": "https://usa.visa.com/careers.html",
+    "region": "Singapore",
+    "notes": "Regional fintech hub, sponsor EP",
+    "in_pipeline": false
+  },
+  {
+    "company": "Mastercard",
+    "careers_link": "https://careers.mastercard.com/",
+    "region": "Singapore",
+    "notes": "Regional fintech hub, sponsor EP",
+    "in_pipeline": false
+  },
+  {
+    "company": "DP World",
+    "careers_link": "internal_path",
+    "region": "Dubai/UAE",
+    "notes": "Already in pipeline, Dubai HQ, big tech arm",
+    "in_pipeline": true
+  },
+  {
+    "company": "Careem",
+    "careers_link": "https://www.careem.com/en-AE/careers/",
+    "region": "Dubai/UAE",
+    "notes": "Uber-owned, Dubai HQ, hires globally incl. India, visa support standard",
+    "in_pipeline": false
+  },
+  {
+    "company": "talabat",
+    "careers_link": "https://corporate.talabat.com/careers/",
+    "region": "Dubai/UAE",
+    "notes": "Dubai/Kuwait delivery-tech, active corporate + tech hiring",
+    "in_pipeline": false
+  },
+  {
+    "company": "Amazon",
+    "careers_link": "https://www.amazon.jobs/",
+    "region": "Dubai/UAE",
+    "notes": "MENA/Souq legacy, Dubai tech hub, growing Dubai tech presence",
+    "in_pipeline": false
+  },
+  {
+    "company": "Microsoft",
+    "careers_link": "https://careers.microsoft.com/",
+    "region": "Dubai/UAE",
+    "notes": "Dubai/DIFC, Regional HQ hiring, sponsors",
+    "in_pipeline": false
+  },
+  {
+    "company": "Google",
+    "careers_link": "https://careers.google.com/",
+    "region": "Dubai/UAE",
+    "notes": "Dubai, smaller but growing regional presence",
+    "in_pipeline": false
+  },
+  {
+    "company": "Majid Al Futtaim",
+    "careers_link": "https://careers.majidalfuttaim.com/",
+    "region": "Dubai/UAE",
+    "notes": "Large Dubai conglomerate, digital/tech arm expanding",
+    "in_pipeline": false
+  },
+  {
+    "company": "Emirates NBD",
+    "careers_link": "https://www.emiratesnbd.com/en/careers",
+    "region": "Dubai/UAE",
+    "notes": "Dubai bank, active tech hiring, visa sponsorship standard",
+    "in_pipeline": false
+  },
+  {
+    "company": "Dubai Holding",
+    "careers_link": "https://www.dubaiholding.com/en/careers/",
+    "region": "Dubai/UAE",
+    "notes": "Free-zone tech cluster, worth browsing broadly",
+    "in_pipeline": false
+  },
+  {
+    "company": "JPMC DIFC",
+    "careers_link": "internal_path",
+    "region": "Dubai/UAE",
+    "notes": "Already have an internal path here given your org",
+    "in_pipeline": true
+  },
+  {
+    "company": "Zalando",
+    "careers_link": "https://jobs.zalando.com/en",
+    "region": "Germany",
+    "notes": "Berlin, EU Blue Card-friendly, large eng org",
+    "in_pipeline": true
+  },
+  {
+    "company": "SAP",
+    "careers_link": "https://jobs.sap.com/",
+    "region": "Germany",
+    "notes": "Walldorf, one of the most consistent non-EU sponsors in German tech",
+    "in_pipeline": false
+  },
+  {
+    "company": "N26",
+    "careers_link": "https://n26.com/en-eu/careers",
+    "region": "Germany",
+    "notes": "Berlin neobank, EU Blue Card sponsor",
+    "in_pipeline": false
+  },
+  {
+    "company": "Trade Republic",
+    "careers_link": "https://traderepublic.com/careers",
+    "region": "Germany",
+    "notes": "Berlin fintech, scaling fast, has sponsored",
+    "in_pipeline": false
+  },
+  {
+    "company": "Celonis",
+    "careers_link": "https://www.celonis.com/careers/",
+    "region": "Germany",
+    "notes": "Munich unicorn, strong non-EU hiring history",
+    "in_pipeline": false
+  },
+  {
+    "company": "Delivery Hero",
+    "careers_link": "https://careers.deliveryhero.com/",
+    "region": "Germany",
+    "notes": "Berlin, has sponsored tech roles regularly",
+    "in_pipeline": false
+  },
+  {
+    "company": "Personio",
+    "careers_link": "https://www.personio.com/karriere/",
+    "region": "Germany",
+    "notes": "Munich HR-tech, EU Blue Card sponsor",
+    "in_pipeline": false
+  },
+  {
+    "company": "Deutsche Bank",
+    "careers_link": "https://careers.db.com/",
+    "region": "Germany",
+    "notes": "Frankfurt/Berlin tech, large tech org, historically sponsors",
+    "in_pipeline": false
+  },
+  {
+    "company": "Siemens",
+    "careers_link": "https://jobs.siemens.com/",
+    "region": "Germany",
+    "notes": "Munich, very established sponsor for engineers",
+    "in_pipeline": false
+  },
+  {
+    "company": "Bosch",
+    "careers_link": "https://www.bosch.com/careers/",
+    "region": "Germany",
+    "notes": "Stuttgart, large-scale non-EU hiring",
+    "in_pipeline": false
+  },
+  {
+    "company": "Amazon",
+    "careers_link": "https://www.amazon.jobs/",
+    "region": "Germany",
+    "notes": "Berlin/Munich tech, sponsors regularly",
+    "in_pipeline": false
+  },
+  {
+    "company": "Adyen",
+    "careers_link": "https://careers.adyen.com/",
+    "region": "Netherlands",
+    "notes": "Dutch fintech, large eng org, regular non-EU sponsorship",
+    "in_pipeline": true
+  },
+  {
+    "company": "Booking.com",
+    "careers_link": "https://careers.booking.com/",
+    "region": "Netherlands",
+    "notes": "Amsterdam HQ, huge tech org, historically sponsors globally",
+    "in_pipeline": false
+  },
+  {
+    "company": "ASML",
+    "careers_link": "https://www.asml.com/en/careers",
+    "region": "Netherlands",
+    "notes": "Veldhoven, heavy international hiring incl. relocation packages",
+    "in_pipeline": false
+  },
+  {
+    "company": "ING",
+    "careers_link": "https://www.ing.jobs/global/",
+    "region": "Netherlands",
+    "notes": "Amsterdam HQ, active tech/engineering hiring, has India campus too",
+    "in_pipeline": false
+  },
+  {
+    "company": "Uber",
+    "careers_link": "https://www.uber.com/us/en/careers/",
+    "region": "Netherlands",
+    "notes": "Amsterdam engineering hub, EMEA eng hub, sponsors HSM",
+    "in_pipeline": false
+  },
+  {
+    "company": "Coolblue",
+    "careers_link": "https://werkenbij.coolblue.nl/",
+    "region": "Netherlands",
+    "notes": "Dutch e-comm, less consistent on non-EU sponsorship but worth scanning",
+    "in_pipeline": false
+  },
+  {
+    "company": "Bol.com",
+    "careers_link": "https://carrieres.bol.com/",
+    "region": "Netherlands",
+    "notes": "Dutch e-comm, less consistent on non-EU sponsorship but worth scanning",
+    "in_pipeline": false
+  },
+  {
+    "company": "TomTom",
+    "careers_link": "https://careers.tomtom.com/",
+    "region": "Netherlands",
+    "notes": "Amsterdam, engineering-heavy, has sponsored before",
+    "in_pipeline": false
+  },
+  {
+    "company": "Netflix",
+    "careers_link": "https://jobs.netflix.com/",
+    "region": "Netherlands",
+    "notes": "Amsterdam EMEA HQ, sponsors selectively for senior/staff roles",
+    "in_pipeline": false
+  },
+  {
+    "company": "Philips",
+    "careers_link": "https://www.careers.philips.com/",
+    "region": "Netherlands",
+    "notes": "Dutch multinational, large eng org",
+    "in_pipeline": false
+  }
+]

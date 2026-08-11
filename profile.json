@@ -1,0 +1,144 @@
+{
+  "name": "Shirsak Sahoo",
+  "role": "Senior Software Engineer",
+  "experience_years": 7,
+  "work_experience": [
+    {
+      "company": "JPMorgan Chase & Co.",
+      "position": "Software Engineer III (SDE 3) | Associate Vice President — Investment Technology",
+      "location": "Bengaluru",
+      "duration": "Sept 2025 – Present",
+      "skills": ["React", "Python", "AWS", "MCP", "AI/ML", "TypeScript", "Agentic Systems", "Design Systems", "Google ADK", "Langchain"],
+      "projects": [
+        {
+          "name": "Connect OS",
+          "description": "Internal platform powering AI-native tooling serving 10,000+ developers, designers and advisors' productivity at JPMC scale"
+        },
+        {
+          "name": "MCP Servers for Design System",
+          "description": "Architected MCP servers enabling LLM-native access using RAG to component APIs, design tokens, and usage guidelines - reducing time to development and migration from months to weeks (~70% decrease)"
+        },
+        {
+          "name": "Connect Studio",
+          "description": "AI-native rapid prototyping platform supporting multiple personas and workflows including design-to-code, story-to-code, and Jira-to-code - reducing time to showcase and review from days to seconds (~95%+ decrease)"
+        }
+      ],
+      "achievements": [
+        "Designed and operated multi-region AWS infrastructure for Connect OS serving 10,000+ internal users — spanning Bedrock, ECS, EFS, S3, and CloudWatch observability with zero-downtime deployment pipelines"
+      ]
+    },
+    {
+      "company": "Aurigo Software Technologies",
+      "position": "Software Engineer (Senior Software Engineer)",
+      "location": "Bengaluru",
+      "duration": "Aug 2019 – Aug 2025",
+      "skills": ["React", "TypeScript", "JavaScript", ".NETCore", "C#", "ASP.NET", "AWS", "Microfrontends", "Design Systems", "LLMs", "AI/ML", "RAG", "Accessibility", "PostgreSQL", "Docker", "Redis", "jQuery", "SCSS"],
+      "projects": [
+        {
+          "name": "Frontend Architecture",
+          "description": "Led frontend architecture for multiple product suites (Essentials 2.0, Plan 2.0, Lumina GPT, Workflow); designed core application platform and in-house design system library"
+        },
+        {
+          "name": "Workflow Builder",
+          "description": "Built drag-and-drop Workflow Builder microservice with real-time notifications using Webhooks and SQS, serving 1000+ concurrent users with <100ms latency"
+        },
+        {
+          "name": "Lumina AI",
+          "description": "Flagship AI-powered product integrating LLMs with AWS SageMaker into enterprise workflows; supported scalable microservices architecture ensuring backwards compatible agentic features"
+        },
+        {
+          "name": "Masterworks Cloud",
+          "description": "Achieved 85% ADA/WCAG compliance adherence, recognized in Aurigo's press release; mentored 5+ external vendor teams on best practices"
+        }
+      ],
+      "achievements": [
+        "Achieved ~80% performance improvement (load times <300ms from 2000+ms) through complete legacy web application revamp",
+        "Delivered engineering estimates with ~95% accuracy",
+        "Mentored 10+ developers across multiple deliverables"
+      ]
+    },
+    {
+      "company": "HCL Technologies",
+      "position": "Internship Trainee — Products & Platforms Division",
+      "location": "Bengaluru",
+      "duration": "Jun 2018 – Dec 2018",
+      "skills": ["Java", "Jenkins", "Flask", "Python", "React", "GitHub"],
+      "projects": [
+        {
+          "name": "Project Migration Tool",
+          "description": "Built a Java application to migrate and manage projects between CI servers (IBM BuildForge and Jenkins), enabling bulk import/export of 10,000+ projects"
+        },
+        {
+          "name": "GitHub Access Audit Tool",
+          "description": "Developed a web application to manage and audit unauthorized access on GitHub@HCL"
+        },
+        {
+          "name": "Status Monitoring Dashboard",
+          "description": "Created a React + Flask dashboard for managers and team leads to monitor multiple application statuses simultaneously — saving 6,000+ person-hours over 3 months"
+        }
+      ],
+      "achievements": [
+        "Saved 6,000+ person-hours over 3 months through dashboard development"
+      ]
+    }
+  ],
+  "skills": [
+    "Python",
+    "JavaScript",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Java",
+    "C#",
+    "Machine Learning",
+    "AI/ML Engineering",
+    "LLM & ML Integration",
+    "RAG",
+    "MCP Servers",
+    "Agentic Systems",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+    "PostgreSQL",
+    "Redis",
+    "MongoDB",
+    "ASP.NET",
+    ".NETCore",
+    "REST APIs",
+    "Microfrontend Architecture",
+    "Design Systems",
+    "CI/CD",
+    "TensorFlow",
+    "n8n"
+  ],
+  "education": {
+    "degree": "Bachelor of Engineering - Electrical and Electronics Engineering",
+    "institution": "Birla Institute of Technology and Science (BITS), Pilani",
+    "year": 2019
+  },
+  "location_preference": [
+    "Netherlands",
+    "Germany",
+    "Dubai",
+    "Singapore"
+  ],
+  "visa_status": "Open to visa sponsorship",
+  "languages": [
+    "English (Professional)",
+    "Hindi (Professional)",
+    "Odia (Native)",
+    "German (Basic - A1)"
+  ],
+  "interests": [
+    "Traveling",
+    "Kayaking",
+    "Surfing",
+    "Driving"
+  ],
+  "contact": {
+    "email": "shirsaksahoo96@gmail.com",
+    "phone": "+91-7997187900",
+    "linkedin": "https://www.linkedin.com/in/shirsaksahoo",
+    "location": "Bangalore, India"
+  }
+}
