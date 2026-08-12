@@ -22,6 +22,64 @@ LLM_MODEL = "unsloth/Qwen3.5-9B-GGUF:Q6_K"
 
 JOB_SEARCH = "software engineer"
 
+LOCATION_PREFERENCE = [
+  "Singapore",
+  "Zurich",
+  "Amsterdam",
+  "Munich",
+  "Berlin",
+  "Dubai",
+  "Dublin",
+  "Frankfurt",
+  "Luxembourg City",
+  "Copenhagen",
+  "Stockholm",
+  "Vienna",
+  "Abu Dhabi",
+  "Geneva",
+  "Paris",
+  "Brussels",
+  "Oslo",
+  "Helsinki",
+  "Hamburg",
+  "Düsseldorf",
+  "Stuttgart",
+  "Cologne",
+  "Rotterdam",
+  "The Hague",
+  "Riyadh",
+  "Doha",
+  "Manama",
+  "Kuala Lumpur",
+  "Bangkok",
+  "Ho Chi Minh City",
+  "Hanoi",
+  "Jakarta",
+  "Manila",
+  "Phnom Penh",
+  "Warsaw",
+  "Prague",
+  "Bucharest",
+  "Tallinn",
+  "Krakow",
+  "Wroclaw",
+  "Budapest",
+  "Barcelona",
+  "Madrid",
+  "Lisbon",
+  "Milan",
+  "Porto",
+  "Rome",
+  "Hong Kong",
+  "Seoul",
+  "Shanghai",
+  "Shenzhen",
+  "Taipei",
+  "Beijing",
+  "Guangzhou",
+  "Chengdu"
+]
+
 USE_VISION = False
 MAX_ACTIONS_PER_STEP = 5
 
@@ -148,9 +206,17 @@ SEARCH FOR:
 
 "{JOB_SEARCH}"
 
+ONLY ACCEPT JOBS IN THESE LOCATIONS:
+
+{LOCATION_PREFERENCE}
+
 Your ONLY task is to find ALL job listings matching:
 
 "{JOB_SEARCH}"
+
+And located in one of these regions/countries:
+
+{LOCATION_PREFERENCE}
 
 ============================================================
 PROCESS
@@ -215,6 +281,7 @@ Do NOT:
 - create files
 - create results.md
 - explain your work
+- collect jobs outside of: {LOCATION_PREFERENCE}
 
 Return ALL matching jobs.
 
@@ -272,6 +339,7 @@ async def find_company(company):
     print(
         f"CAREERS : {company['careers_link']}"
     )
+    print(f"LOCATIONS: {LOCATION_PREFERENCE}")
     print("=" * 80)
 
     task = build_task(company)
@@ -323,6 +391,10 @@ async def find_company(company):
                 continue
 
             if not job_url:
+                continue
+
+            # Filter by location preference
+            if location and location not in LOCATION_PREFERENCE:
                 continue
 
             output.append({
@@ -412,6 +484,10 @@ async def main():
 
     print(
         f"Search    : {JOB_SEARCH}"
+    )
+
+    print(
+        f"Locations : {LOCATION_PREFERENCE}"
     )
 
     print(
