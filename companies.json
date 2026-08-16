@@ -11,7 +11,37 @@
     "careers_link": "https://career.sea.com/",
     "region": [
       "Singapore"
-    ]
+    ],
+    "playwright": {
+      "version": 1,
+      "steps": [
+        {
+          "action": "goto",
+          "url": "https://career.sea.com/"
+        },
+        {
+          "action": "fill",
+          "selector": ":shadow-root>input[name='keyword']",
+          "value": "software engineer"
+        },
+        {
+          "action": "click",
+          "selector": ":shadow-root>div[id^='61']"
+        },
+        {
+          "action": "wait",
+          "selector": ":shadow-root>div[id^='61']"
+        },
+        {
+          "action": "extract_and_paginate",
+          "card_selector": ":scope>div[id^='1546'], :scope>div[id^='1547'], :scope>div[id^='1548'], :scope>div[id^='1549']",
+          "title_selector": ":scope>a",
+          "location_selector": ":scope>div[id^='1546']>div>div[id^='1501'], :scope>div[id^='1547']>div>div[id^='1476'], :scope>div[id^='1548']>div>div[id^='1501'], :scope>div[id^='1549']>div>div[id^='1526']",
+          "url_selector": ":scope>a",
+          "next_selector": "[role='link'][aria-label*='page']"
+        }
+      ]
+    }
   },
   {
     "company": "DBS Bank",
@@ -293,9 +323,11 @@
     ]
   },
   {
-      "company": "Adyen",
-      "careers_link": "https://careers.adyen.com/",
-      "region": ["Netherlands"]
+    "company": "Adyen",
+    "careers_link": "https://careers.adyen.com/",
+    "region": [
+      "Netherlands"
+    ]
   },
   {
     "company": "Booking.com",
@@ -340,33 +372,45 @@
     }
   },
   {
-        "company": "ASML",
-        "careers_link": "https://www.asml.com/en/careers",
-        "region": ["Netherlands"]
-    },
-    {
-        "company": "ING",
-        "careers_link": "https://www.ing.jobs/global/",
-        "region": ["Netherlands"]
-    },
-    {
-        "company": "Coolblue",
-        "careers_link": "https://werkenbij.coolblue.nl/",
-        "region": ["Netherlands"]
-    },
-    {
-        "company": "Bol.com",
-        "careers_link": "https://carrieres.bol.com/",
-        "region": ["Netherlands"]
-    },
-    {
-        "company": "TomTom",
-        "careers_link": "https://careers.tomtom.com/",
-        "region": ["Netherlands"]
-    },
-    {
-        "company": "Philips",
-        "careers_link": "https://www.careers.philips.com/",
-        "region": ["Netherlands"]
-    }
+    "company": "ASML",
+    "careers_link": "https://www.asml.com/en/careers",
+    "region": [
+      "Netherlands"
+    ]
+  },
+  {
+    "company": "ING",
+    "careers_link": "https://www.ing.jobs/global/",
+    "region": [
+      "Netherlands"
+    ]
+  },
+  {
+    "company": "Coolblue",
+    "careers_link": "https://werkenbij.coolblue.nl/",
+    "region": [
+      "Netherlands"
+    ]
+  },
+  {
+    "company": "Bol.com",
+    "careers_link": "https://carrieres.bol.com/",
+    "region": [
+      "Netherlands"
+    ]
+  },
+  {
+    "company": "TomTom",
+    "careers_link": "https://careers.tomtom.com/",
+    "region": [
+      "Netherlands"
+    ]
+  },
+  {
+    "company": "Philips",
+    "careers_link": "https://www.careers.philips.com/",
+    "region": [
+      "Netherlands"
+    ]
+  }
 ]
