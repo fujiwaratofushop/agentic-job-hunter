@@ -1,202 +1,372 @@
 [
-    {
-        "company": "Grab",
-        "careers_link": "https://www.grab.careers/en/jobs/",
-        "region": "Singapore"
-    },
-    {
-        "company": "Sea Ltd / Shopee",
-        "careers_link": "https://career.sea.com/",
-        "region": "Singapore"
-    },
-    {
-        "company": "DBS Bank",
-        "careers_link": "https://www.dbs.com/careers/default.page",
-        "region": "Singapore"
-    },
-    {
-        "company": "GIC",
-        "careers_link": "https://gic.careers/",
-        "region": "Singapore"
-    },
-    {
-        "company": "Google",
-        "careers_link": "https://careers.google.com/",
-        "region": "Singapore"
-    },
-    {
-        "company": "ByteDance/TikTok",
-        "careers_link": "https://careers.tiktok.com/",
-        "region": "Singapore"
-    },
-    {
-        "company": "Temasek",
-        "careers_link": "https://www.temasek.com.sg/en/careers",
-        "region": "Singapore"
-    },
-    {
-        "company": "Visa",
-        "careers_link": "https://usa.visa.com/careers.html",
-        "region": "Singapore"
-    },
-    {
-        "company": "Mastercard",
-        "careers_link": "https://careers.mastercard.com/",
-        "region": "Singapore"
-    },
-    {
-        "company": "DP World",
-        "careers_link": "internal_path",
-        "region": "Dubai/UAE"
-    },
-    {
-        "company": "Careem",
-        "careers_link": "https://www.careem.com/en-AE/careers/",
-        "region": "Dubai/UAE"
-    },
-    {
-        "company": "talabat",
-        "careers_link": "https://corporate.talabat.com/careers/",
-        "region": "Dubai/UAE"
-    },
-    {
-        "company": "Amazon",
-        "careers_link": "https://www.amazon.jobs/",
-        "region": "Dubai/UAE"
-    },
-    {
-        "company": "Microsoft",
-        "careers_link": "https://careers.microsoft.com/",
-        "region": "Dubai/UAE"
-    },
-    {
-        "company": "Google",
-        "careers_link": "https://careers.google.com/",
-        "region": "Dubai/UAE"
-    },
-    {
-        "company": "Majid Al Futtaim",
-        "careers_link": "https://careers.majidalfuttaim.com/",
-        "region": "Dubai/UAE"
-    },
-    {
-        "company": "Emirates NBD",
-        "careers_link": "https://www.emiratesnbd.com/en/careers",
-        "region": "Dubai/UAE"
-    },
-    {
-        "company": "Dubai Holding",
-        "careers_link": "https://www.dubaiholding.com/en/careers/",
-        "region": "Dubai/UAE"
-    },
-    {
-        "company": "JPMC DIFC",
-        "careers_link": "internal_path",
-        "region": "Dubai/UAE"
-    },
-    {
-        "company": "Zalando",
-        "careers_link": "https://jobs.zalando.com/en",
-        "region": "Germany"
-    },
-    {
-        "company": "SAP",
-        "careers_link": "https://jobs.sap.com/",
-        "region": "Germany"
-    },
-    {
-        "company": "N26",
-        "careers_link": "https://n26.com/en-eu/careers",
-        "region": "Germany"
-    },
-    {
-        "company": "Trade Republic",
-        "careers_link": "https://traderepublic.com/careers",
-        "region": "Germany"
-    },
-    {
-        "company": "Celonis",
-        "careers_link": "https://www.celonis.com/careers/",
-        "region": "Germany"
-    },
-    {
-        "company": "Delivery Hero",
-        "careers_link": "https://careers.deliveryhero.com/",
-        "region": "Germany"
-    },
-    {
-        "company": "Personio",
-        "careers_link": "https://www.personio.com/karriere/",
-        "region": "Germany"
-    },
-    {
-        "company": "Deutsche Bank",
-        "careers_link": "https://careers.db.com/",
-        "region": "Germany"
-    },
-    {
-        "company": "Siemens",
-        "careers_link": "https://jobs.siemens.com/",
-        "region": "Germany"
-    },
-    {
-        "company": "Bosch",
-        "careers_link": "https://www.bosch.com/careers/",
-        "region": "Germany"
-    },
-    {
-        "company": "Amazon",
-        "careers_link": "https://www.amazon.jobs/",
-        "region": "Germany"
-    },
-    {
-        "company": "Adyen",
-        "careers_link": "https://careers.adyen.com/",
-        "region": "Netherlands"
-    },
-    {
-        "company": "Booking.com",
-        "careers_link": "https://careers.booking.com/",
-        "region": "Netherlands"
-    },
-    {
+  {
+    "company": "Grab",
+    "careers_link": "https://www.grab.careers/en/jobs/",
+    "region": [
+      "Singapore"
+    ]
+  },
+  {
+    "company": "Sea Ltd / Shopee",
+    "careers_link": "https://career.sea.com/",
+    "region": [
+      "Singapore"
+    ]
+  },
+  {
+    "company": "DBS Bank",
+    "careers_link": "https://www.dbs.com/careers/default.page",
+    "region": [
+      "Singapore"
+    ],
+    "playwright": {
+      "version": 1,
+      "steps": [
+        {
+          "action": "goto",
+          "url": "https://www.dbs.com/careers/default.page"
+        },
+        {
+          "action": "fill",
+          "selector": "#emts1",
+          "value": "software engineer"
+        },
+        {
+          "action": "click",
+          "selector": "#8f910fc9-2a24-4b2e-8588-9d3f436d0d89"
+        },
+        {
+          "action": "wait",
+          "selector": "#emts3"
+        },
+        {
+          "action": "click",
+          "selector": "#emts3"
+        },
+        {
+          "action": "wait",
+          "selector": ".wd-accordion-item-content"
+        },
+        {
+          "action": "click",
+          "selector": ".wd-accordion-item-content [role=option]:contains(Singapore)"
+        },
+        {
+          "action": "wait",
+          "selector": "#mainContent"
+        },
+        {
+          "action": "extract_and_paginate",
+          "card_selector": ".job-card",
+          "title_selector": ".job-title",
+          "location_selector": ".job-location",
+          "url_selector": ".job-link a",
+          "next_selector": "[aria-label=next]"
+        }
+      ]
+    }
+  },
+  {
+    "company": "GIC",
+    "careers_link": "https://gic.careers/",
+    "region": [
+      "Singapore"
+    ],
+    "playwright": {
+      "version": 1,
+      "steps": [
+        {
+          "action": "goto",
+          "url": "https://careers.gic.com.sg/search/?q=&locationsearch="
+        },
+        {
+          "action": "fill",
+          "selector": "#q",
+          "value": "software engineer"
+        },
+        {
+          "action": "click",
+          "selector": "#searchfilter-submit"
+        },
+        {
+          "action": "wait",
+          "selector": "#searchresults"
+        },
+        {
+          "action": "extract_and_paginate",
+          "card_selector": "tr[id^=search-results-]",
+          "title_selector": "td a[href]",
+          "location_selector": "td:nth-child(5) a",
+          "url_selector": "td:nth-child(5) a",
+          "next_selector": ".pagination-next"
+        }
+      ]
+    }
+  },
+  {
+    "company": "ByteDance/TikTok",
+    "careers_link": "https://careers.tiktok.com/",
+    "region": [
+      "Singapore"
+    ]
+  },
+  {
+    "company": "Temasek",
+    "careers_link": "https://www.temasek.com.sg/en/careers",
+    "region": [
+      "Singapore"
+    ],
+    "playwright": {
+      "version": 1,
+      "steps": [
+        {
+          "action": "goto",
+          "url": "https://jobs.temasek.com.sg/search"
+        },
+        {
+          "action": "fill",
+          "selector": "#q",
+          "value": "software engineer"
+        },
+        {
+          "action": "fill",
+          "selector": "#locationsearch",
+          "value": "Singapore"
+        },
+        {
+          "action": "click",
+          "selector": "#searchfilter-submit"
+        },
+        {
+          "action": "wait",
+          "selector": "#searchresults"
+        },
+        {
+          "action": "extract_and_paginate",
+          "card_selector": "tr[id^=search-results-row]",
+          "title_selector": "a[href]",
+          "location_selector": "td:nth-child(3)",
+          "url_selector": "a[href]",
+          "next_selector": "[title=Page 2]"
+        }
+      ]
+    }
+  },
+  {
+    "company": "Visa",
+    "careers_link": "https://usa.visa.com/careers.html",
+    "region": [
+      "Singapore"
+    ]
+  },
+  {
+    "company": "Mastercard",
+    "careers_link": "https://careers.mastercard.com/",
+    "region": [
+      "Singapore"
+    ]
+  },
+  {
+    "company": "DP World",
+    "careers_link": "internal_path",
+    "region": [
+      "Dubai/UAE"
+    ]
+  },
+  {
+    "company": "Careem",
+    "careers_link": "https://www.careem.com/en-AE/careers/",
+    "region": [
+      "Dubai/UAE"
+    ]
+  },
+  {
+    "company": "talabat",
+    "careers_link": "https://corporate.talabat.com/careers/",
+    "region": [
+      "Dubai/UAE"
+    ]
+  },
+  {
+    "company": "Microsoft",
+    "careers_link": "https://careers.microsoft.com/",
+    "region": [
+      "Dubai/UAE"
+    ]
+  },
+  {
+    "company": "Majid Al Futtaim",
+    "careers_link": "https://careers.majidalfuttaim.com/",
+    "region": [
+      "Dubai/UAE"
+    ]
+  },
+  {
+    "company": "Emirates NBD",
+    "careers_link": "https://www.emiratesnbd.com/en/careers",
+    "region": [
+      "Dubai/UAE"
+    ]
+  },
+  {
+    "company": "Dubai Holding",
+    "careers_link": "https://www.dubaiholding.com/en/careers/",
+    "region": [
+      "Dubai/UAE"
+    ]
+  },
+  {
+    "company": "JPMC DIFC",
+    "careers_link": "internal_path",
+    "region": [
+      "Dubai/UAE"
+    ]
+  },
+  {
+    "company": "Zalando",
+    "careers_link": "https://jobs.zalando.com/en",
+    "region": [
+      "Germany"
+    ]
+  },
+  {
+    "company": "SAP",
+    "careers_link": "https://jobs.sap.com/",
+    "region": [
+      "Germany"
+    ]
+  },
+  {
+    "company": "N26",
+    "careers_link": "https://n26.com/en-eu/careers",
+    "region": [
+      "Germany"
+    ]
+  },
+  {
+    "company": "Trade Republic",
+    "careers_link": "https://traderepublic.com/careers",
+    "region": [
+      "Germany"
+    ]
+  },
+  {
+    "company": "Celonis",
+    "careers_link": "https://www.celonis.com/careers/",
+    "region": [
+      "Germany"
+    ]
+  },
+  {
+    "company": "Delivery Hero",
+    "careers_link": "https://careers.deliveryhero.com/",
+    "region": [
+      "Germany"
+    ]
+  },
+  {
+    "company": "Personio",
+    "careers_link": "https://www.personio.com/karriere/",
+    "region": [
+      "Germany"
+    ]
+  },
+  {
+    "company": "Deutsche Bank",
+    "careers_link": "https://careers.db.com/",
+    "region": [
+      "Germany"
+    ]
+  },
+  {
+    "company": "Siemens",
+    "careers_link": "https://jobs.siemens.com/",
+    "region": [
+      "Germany"
+    ]
+  },
+  {
+    "company": "Bosch",
+    "careers_link": "https://www.bosch.com/careers/",
+    "region": [
+      "Germany"
+    ]
+  },
+  {
+      "company": "Adyen",
+      "careers_link": "https://careers.adyen.com/",
+      "region": ["Netherlands"]
+  },
+  {
+    "company": "Booking.com",
+    "careers_link": "https://jobs.booking.com/booking/jobs",
+    "api": "https://jobs.booking.com/booking/jobs?keywords=software%20engineer&location=Netherlands&woe=12&regionCode=NL&stretchUnit=MILES&stretch=25&sortBy=relevance&page=2",
+    "region": [
+      "Netherlands"
+    ],
+    "playwright": {
+      "version": 1,
+      "steps": [
+        {
+          "action": "goto",
+          "url": "https://jobs.booking.com/booking/jobs"
+        },
+        {
+          "action": "fill",
+          "selector": "#keyword-search",
+          "value": "software engineer"
+        },
+        {
+          "action": "wait",
+          "selector": "#keyword-search-listbox-results"
+        },
+        {
+          "action": "click",
+          "selector": "[role=option]~[aria-label*='Software Engineer']"
+        },
+        {
+          "action": "wait",
+          "selector": ".mat-expansion-panel-header"
+        },
+        {
+          "action": "extract_and_paginate",
+          "card_selector": ".mat-expansion-panel-header",
+          "title_selector": "[id^=\"link-job-\"]",
+          "location_selector": "[id^=\"link-location-\"]",
+          "url_selector": "[id^=\"link-job-\"]",
+          "next_selector": "[aria-label=Next Page of Job Search Results]"
+        }
+      ]
+    }
+  },
+  {
         "company": "ASML",
         "careers_link": "https://www.asml.com/en/careers",
-        "region": "Netherlands"
+        "region": ["Netherlands"]
     },
     {
         "company": "ING",
         "careers_link": "https://www.ing.jobs/global/",
-        "region": "Netherlands"
-    },
-    {
-        "company": "Uber",
-        "careers_link": "https://www.uber.com/us/en/careers/",
-        "region": "Netherlands"
+        "region": ["Netherlands"]
     },
     {
         "company": "Coolblue",
         "careers_link": "https://werkenbij.coolblue.nl/",
-        "region": "Netherlands"
+        "region": ["Netherlands"]
     },
     {
         "company": "Bol.com",
         "careers_link": "https://carrieres.bol.com/",
-        "region": "Netherlands"
+        "region": ["Netherlands"]
     },
     {
         "company": "TomTom",
         "careers_link": "https://careers.tomtom.com/",
-        "region": "Netherlands"
-    },
-    {
-        "company": "Netflix",
-        "careers_link": "https://jobs.netflix.com/",
-        "region": "Netherlands"
+        "region": ["Netherlands"]
     },
     {
         "company": "Philips",
         "careers_link": "https://www.careers.philips.com/",
-        "region": "Netherlands"
+        "region": ["Netherlands"]
     }
 ]
