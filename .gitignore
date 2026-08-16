@@ -1,2 +1,4 @@
 scratch/*
 _pycache_/*
+__pycache__/*
+profile/*

@@ -6,6 +6,7 @@ from pathlib import Path
 from urllib.parse import urljoin
 
 from browser_use import Agent, Controller, ActionResult, ChatOpenAI
+from browser_use.browser.session import BrowserSession
 from playwright.async_api import async_playwright
 from pydantic import BaseModel, Field
 
@@ -223,8 +224,11 @@ class JobItem(BaseModel):
     job_url: str = ""
 
 
-class SaveJobsParams(BaseModel):
-    jobs: list[JobItem] = Field(default_factory=list)
+class ExtractJobsParams(BaseModel):
+    card_selector: str = Field(..., description="CSS selector for job cards (e.g. '.job-card', 'article.job-listing')")
+    title_selector: str = Field(..., description="CSS selector for job titles within each card")
+    location_selector: str = Field(..., description="CSS selector for job locations within each card")
+    url_selector: str = Field(..., description="CSS selector for job URLs within each card")
 
 
 class SaveRecipeParams(BaseModel):
@@ -239,42 +243,40 @@ def build_controller(company):
     controller = Controller()
 
     @controller.action(
-        "Save every job card visible on the CURRENT page to disk. Call "
-        "this once per page, right after the page/list has loaded and "
-        "BEFORE you click Next or paginate. Include EVERY job card "
-        "exactly as shown on the page - title, location, and link. Do "
-        "NOT decide whether a job matches the search term, do NOT skip "
-        "jobs that look irrelevant, and do NOT clean up or translate the "
-        "title. Just copy what's on the page, all of it. Filtering is "
-        "handled separately afterwards, not by you.",
-        param_model=SaveJobsParams,
+        "Extract every job card on the CURRENT page using CSS selectors and save "
+        "to disk. You provide the SELECTORS (e.g. '.job-card', 'a.job-title'), "
+        "NOT the job data itself - the tool reads the page and copies exact "
+        "title/location/href for every matching element. Call this once per "
+        "page, before pagination. The tool will read the DOM and extract data "
+        "deterministically - you do NOT type out the job data. If 0 cards match, "
+        "your selector is probably wrong - try again with a different selector.",
+        param_model=ExtractJobsParams,
     )
-    def save_jobs(params: SaveJobsParams) -> ActionResult:
+    async def extract_jobs_by_selector(
+        params: ExtractJobsParams,
+        browser_session: BrowserSession,
+    ) -> ActionResult:
+        page = await browser_session.must_get_current_page()
 
-        if not params.jobs:
+        jobs = await extract_cards(page, {
+            "card_selector": params.card_selector,
+            "title_selector": params.title_selector,
+            "location_selector": params.location_selector,
+            "url_selector": params.url_selector,
+        })
+
+        if not jobs:
             return ActionResult(
-                extracted_content="No jobs were passed in, nothing saved.",
-                include_in_memory=False,
+                extracted_content=f"0 cards matched '{params.card_selector}' - selector is probably wrong, try again.",
+                include_in_memory=True,  # let it see the failure and retry
             )
 
         with open(jobs_path, "a", encoding="utf-8") as f:
-            for job in params.jobs:
-                f.write(
-                    json.dumps(
-                        job.model_dump(),
-                        ensure_ascii=False,
-                    )
-                    + "\n"
-                )
+            for job in jobs:
+                f.write(json.dumps(job, ensure_ascii=False) + "\n")
 
-        # include_in_memory=False is the important bit: once this is on
-        # disk, the model does not need to keep carrying it in context
-        # for the rest of the run.
         return ActionResult(
-            extracted_content=(
-                f"Saved {len(params.jobs)} job(s) to disk. You do not "
-                f"need to remember them - move on to the next page."
-            ),
+            extracted_content=f"Extracted {len(jobs)} jobs via selector, saved to disk.",
             include_in_memory=False,
         )
 
@@ -810,12 +812,14 @@ Steps:
     narrower substitute before moving on.
 
 
-2. On EVERY page of results, call the save_jobs tool ONCE with every
+2. On EVERY page of results, call the extract_jobs_by_selector tool ONCE with every
    single job card visible on that page - title, location, and link,
    exactly as shown. Copy ALL of them, even ones that look unrelated
    to "{JOB_SEARCH}". Do not summarize, do not paraphrase the title.
+   Provide the CSS selectors for cards, titles, locations, and URLs.
+   The tool will read the DOM and extract data deterministically.
 
-3. After calling save_jobs for a page, click Next / pagination /
+3. After calling extract_jobs_by_selector for a page, click Next / pagination /
    Load more / Show more / View more to reach the next page, and
    repeat step 2. Keep going until there are no more results.
 
@@ -829,7 +833,7 @@ Steps:
 5. Once there are no more pages, call `done` with success=true and a
    short one-line message, e.g. "Saved 7 pages of results." Do NOT try
    to compile, list, or repeat the job data in your final answer - it
-   is already saved to disk via save_jobs.
+   is already saved to disk via extract_jobs_by_selector.
 
 ============================================================
 PLAYWRIGHT RECIPE JSON SHAPE
@@ -931,6 +935,11 @@ def normalize_jobs(
         )
 
         if not job_url:
+            print(
+                f"[FILTER] "
+                f"Rejected empty URL: "
+                f"{title} @ {location}"
+            )
             continue
 
         # ----------------------------------------------------
@@ -972,9 +981,21 @@ def normalize_jobs(
     # Deduplicate
     # --------------------------------------------------------
 
+    # Use (title, location, job_url) as the dedup key instead of just job_url
+    # This prevents two genuinely different postings that both fail to get a url
+    # from being silently merged into one row.
     unique = {}
 
     for job in output:
+
+        # Log when job_url is empty before dropping it
+        if not job_url:
+            print(
+                f"[DUP/EMPTY] "
+                f"Job with empty URL, skipping dedup: "
+                f"{title} @ {location}"
+            )
+            continue
 
         key = (
             job[
